@@ -16,12 +16,7 @@ MSCS-632-Assignment5/
 │   ├── main.cpp
 │   └── Makefile
 └── Smalltalk/
-    ├── Ride.st
-    ├── StandardRide.st
-    ├── PremiumRide.st
-    ├── Driver.st
-    ├── Rider.st
-    └── main.st
+    ├── ride-sharing.st
 ```
 
 ## Features
@@ -70,13 +65,12 @@ make clean
 2. Load the class files in order:
 ```bash 
 smalltalk
-FileStream fileIn: 'Ride.st'.
-FileStream fileIn: 'StandardRide.st'.
-FileStream fileIn: 'PremiumRide.st'.
-FileStream fileIn: 'Driver.st'.
-FileStream fileIn: 'Rider.st'.
-FileStream fileIn: 'main.st'.
+FileStream fileIn: 'ride-sharing.st'.
 ```
+### Running Smalltalk using online compiler
+1. open https://www.jdoodle.com/execute-smalltalk-online 
+2. copy code from ride-sharing.st to the IDE
+3. Click on Execute button on the top right
 
 ### Key Smalltalk Features Used
 - Message passing for polymorphism
@@ -98,7 +92,7 @@ Rider
 └── Manages ride requests and spending
 ```
 
-## Sample Output
+## Sample Output for CPP
 
 ```
 ===== Demonstrating Polymorphism with Different Ride Types =====
@@ -118,6 +112,26 @@ Rating: 5.0 stars
 Total Rides: 4
 Total Earnings: $137.50
 ...
+```
+
+## Sample Output for SmallTalk
+```
+'===== Demonstrating Polymorphism with Different Ride Types ====='
+'Ride Details:'
+'Ride ID: 1From: Main StTo: BroadwayDistance: 5 milesFare: $15.0 (Standard)'
+'Ride ID: 2From: AirportTo: DowntownDistance: 15 milesFare: $67.5 (Premium)'
+'Ride ID: 3From: UniversityTo: MallDistance: 8 milesFare: $21.0 (Standard)'
+''
+'Total fare for all rides: $103.5'
+''
+'Driver Information:'
+'Driver ID: 101 Name: John Doe Rating: 4.8 Completed Rides: 3'
+''
+'Rider History:'
+'Ride history for Alice Smith:
+Ride ID: 1From: Main StTo: BroadwayDistance: 5 milesFare: $15.0 (Standard)
+Ride ID: 2From: AirportTo: DowntownDistance: 15 milesFare: $67.5 (Premium)
+Ride ID: 3From: UniversityTo: MallDistance: 8 milesFare: $21.0 (Standard)'
 ```
 
 ## Testing
